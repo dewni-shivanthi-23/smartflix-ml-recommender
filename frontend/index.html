@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>SmartFlix — Movie Recommender</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <header class="app-header">
+      <div class="brand">
+        <span class="logo">🎬</span>
+        <h1>SmartFlix</h1>
+      </div>
+      <nav class="actions">
+        <button id="favoritesBtn" class="ghost">⭐ Favorites</button>
+        <button id="clearBtn" class="ghost">Clear</button>
+      </nav>
+    </header>
+
+    <main class="container">
+      <section class="panel">
+        <h2>Tell us some movies you like</h2>
+
+        <div class="search-row">
+          <input
+            id="movieInput"
+            type="text"
+            placeholder="Type a title, press Enter…"
+            autocomplete="off"
+          />
+          <button id="addMovieBtn" class="primary">Add</button>
+        </div>
+
+        <div id="chips" class="chips"></div>
+
+        <div class="controls">
+          <label for="topK">Top-K:</label>
+          <input id="topK" type="number" min="1" max="50" value="10" />
+          <button id="recommendBtn" class="primary big">
+            Get Recommendations
+          </button>
+        </div>
+
+        <p class="hint">Tip: paste several titles separated by commas.</p>
+        <div id="suggestions" class="suggestions"></div>
+      </section>
+
+      <section class="results">
+        <div id="status" class="status"></div>
+        <div id="grid" class="grid"></div>
+      </section>
+    </main>
+
+    <div id="modal" class="modal hidden" aria-hidden="true">
+      <div class="modal-card">
+        <button id="modalClose" class="icon-btn" aria-label="Close">✖</button>
+        <div id="modalBody"></div>
+      </div>
+    </div>
+
+    <footer class="app-footer">
+      <small>Backend: <code id="apiInfo"></code></small>
+    </footer>
+
+    <script type="module" src="./js/app.js"></script>
+  </body>
+</html>
