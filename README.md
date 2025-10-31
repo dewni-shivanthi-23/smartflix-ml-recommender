@@ -31,10 +31,10 @@ smartflix-ml-recommender/
 - Place any datasets in the `data/` directory.
 
 4. Run the backend server
-# Using Uvicorn (FastAPI)
+## Using Uvicorn (FastAPI)
 python -m uvicorn src.server:app --reload
 
-# Using simple HTTP server (for frontend static files)
+## Using simple HTTP server (for frontend static files)
 python -m http.server 5500
 
 
@@ -85,5 +85,6 @@ Frontend (if static HTML/CSS/JS) will run at http://127.0.0.1:5500
 - Surprise: https://surpriselib.com/
 - LightFM: https://making.lyst.com/lightfm/
 - Flask Docs: https://flask.palletsprojects.com/
+
 
 
