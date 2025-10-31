@@ -30,6 +30,18 @@ smartflix-ml-recommender/
 - Use the `notebooks/` directory to begin with EDA or experiments.
 - Place any datasets in the `data/` directory.
 
+4. Run the backend server
+# Using Uvicorn (FastAPI)
+python -m uvicorn src.server:app --reload
+
+# Using simple HTTP server (for frontend static files)
+python -m http.server 5500
+
+
+Backend API will be accessible at http://127.0.0.1:8000
+
+Frontend (if static HTML/CSS/JS) will run at http://127.0.0.1:5500
+
 ---
 
 ## 🧠 ML Techniques Used
@@ -73,4 +85,5 @@ smartflix-ml-recommender/
 - Surprise: https://surpriselib.com/
 - LightFM: https://making.lyst.com/lightfm/
 - Flask Docs: https://flask.palletsprojects.com/
+
 
